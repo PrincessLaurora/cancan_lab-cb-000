@@ -5,6 +5,8 @@ class Ability
 
   def initialize(user)
 
+    user ||= user.new
+
     can :read, Note do |note|
       note.readers.include?(user)
     end
