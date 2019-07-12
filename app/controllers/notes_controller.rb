@@ -25,7 +25,7 @@ class NotesController < ApplicationController
       if current_user
       @note.update(note_params)
       redirect_to '/'
-    end
+      end
     end
 
     def edit
