@@ -9,9 +9,9 @@ class NotesController < ApplicationController
     end
 
     def create
-      if logged_in?
         @note = Note.create(note_params)
-        if @note.save
+        if logged_in?
+       @note.save
           redirect_to '/'
         end
       end
