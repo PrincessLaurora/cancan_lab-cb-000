@@ -24,10 +24,10 @@ class NotesController < ApplicationController
     end
 
     def update
+      if @note.update(note_params)
+      redirect_to '/' 
     end
 
-    def destroy
-    end
 
     private
 
