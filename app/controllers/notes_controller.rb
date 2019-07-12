@@ -4,7 +4,7 @@ class NotesController < ApplicationController
     def index
       if current_user
       @notes = current_user.readable
-    end
+      end
     end
 
     def new
