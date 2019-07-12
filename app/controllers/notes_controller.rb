@@ -5,6 +5,7 @@ class NotesController < ApplicationController
       if current_user
       @notes = current_user.readable
     end
+    end
 
     def new
       @note = Note.new
