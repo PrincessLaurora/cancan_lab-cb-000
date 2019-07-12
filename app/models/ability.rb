@@ -5,12 +5,10 @@ class Ability
 
   def initialize(user)
 
-
-    can :update, Note
     can :read, Note do |note|
       if user = note.readers
     #   user ||= User.new # guest user (not logged in)
-    #if  if user.admin?
+    can :update, Note, owner_id: user.id
     #     can :manage, :all
     #   else
     #     can :read, :all
