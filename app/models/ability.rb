@@ -8,8 +8,6 @@ class Ability
     can :read, Note do |note|
       user.include?(note.readers)
 
-      unless user.nil?
-      can :update, Note
     #     can :manage, :all
     #   else
     #     can :read, :all
@@ -29,8 +27,7 @@ class Ability
     # For example, here the user can only update published articles.
     #
     #   can :update, Article, :published => true
-  end
-end
+  
   end
   end
 end
