@@ -20,16 +20,18 @@ class NotesController < ApplicationController
       redirect_to '/'
     end
 
+    def update
+      @note.update(note_params)
+      redirect_to '/'
+    end
+    
     def edit
     end
 
     def show
     end
 
-    def update
-      @note.update(note_params)
-      redirect_to '/'
-    end
+  
 
 
 
