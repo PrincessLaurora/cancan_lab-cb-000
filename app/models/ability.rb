@@ -8,7 +8,7 @@ class Ability
     can :read, Note do |note|
       if user == note.readers
     #   user ||= User.new # guest user (not logged in)
-    #   if user.admin?
+    #  if user.admin?
     #     can :manage, :all
     #   else
     #     can :read, :all
@@ -29,6 +29,6 @@ class Ability
     #
     #   can :update, Article, :published => true
     #
-    # See the wiki for details:
+  end# See the wiki for details:
   end
 end
