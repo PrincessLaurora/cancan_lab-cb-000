@@ -2,7 +2,7 @@
 
 class Ability
   include CanCan::Ability
-
+  return unless user
   def initialize(user)
 
     can :read, Note do |note|
