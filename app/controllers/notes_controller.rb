@@ -17,7 +17,6 @@ class NotesController < ApplicationController
         end
       end
     end
-    end
 
     def show
       @note = Note.find(params[:id])
@@ -34,7 +33,7 @@ class NotesController < ApplicationController
     def note_params
       params.require(:note).permit(:content, visible_to: '')
     end
-  end
+
 
 
 end
