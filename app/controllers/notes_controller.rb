@@ -17,13 +17,14 @@ class NotesController < ApplicationController
       if current_user
       note = Note.new(note_params)
       note.save!
-      redirect_to '/'
       end
+      redirect_to '/'
     end
 
     def update
       if current_user
       @note.update(note_params)
+    end
       redirect_to '/'
       end
     end
