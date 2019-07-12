@@ -6,7 +6,7 @@ class Ability
   def initialize(user)
 
     can :read, Note do |note|
-      note.readers.include?(user)
+      if note.readers.include?(user)
 
     #     can :manage, :all
     #   else
