@@ -12,7 +12,7 @@ class NotesController < ApplicationController
       note.user = current_user
       note.save!
       redirect_to '/'
-    end
+    end 
 
     def edit
     end
