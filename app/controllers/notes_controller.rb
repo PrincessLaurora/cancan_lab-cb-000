@@ -23,8 +23,8 @@ class NotesController < ApplicationController
     def update
       @note.update(note_params)
       redirect_to '/'
-      end
     end
+
 
 
     private
