@@ -6,7 +6,7 @@ class Ability
   def initialize(user)
 
     can :read, Note do |note|
-      user.include?(note.readers)
+      note.readers.include?(user)
 
     #     can :manage, :all
     #   else
@@ -27,7 +27,7 @@ class Ability
     # For example, here the user can only update published articles.
     #
     #   can :update, Article, :published => true
-  
+
   end
   end
 end
