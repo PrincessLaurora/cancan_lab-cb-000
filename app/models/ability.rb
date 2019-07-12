@@ -29,6 +29,6 @@ class Ability
     #
     #   can :update, Article, :published => true
     #
-
+  end
   end
 end
