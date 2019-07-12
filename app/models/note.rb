@@ -14,4 +14,14 @@ class Note < ApplicationRecord
     def visible_to
       readers.map { |u| u.name }.join(', ')
     end
+
+    private
+
+  def ensure_owner_can_read
+    if user && !readers.include?(user)
+      readers << user
+    end
+  end
+end
+
 end
