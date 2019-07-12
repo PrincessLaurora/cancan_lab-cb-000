@@ -16,6 +16,8 @@ class Ability
     end
   end
 end
+
+
  #or
  #can :read, Note do |note|
    #note.readers.include?(user)
