@@ -2,7 +2,12 @@ class NotesController < ApplicationController
   load_and_authorize_resource only: [:edit, :show, :update]
 
     def index
+      @notes = Note.none
+      if current_user
+     @notes = current_user.readable
+      end
     end
+    
 
     def new
     end
@@ -12,7 +17,7 @@ class NotesController < ApplicationController
       note.user = current_user
       note.save!
       redirect_to '/'
-    end 
+    end
 
     def edit
     end
