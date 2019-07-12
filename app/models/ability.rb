@@ -6,7 +6,7 @@ class Ability
   def initialize(user)
 
     can :read, Note do |note|
-      note.readers.include?(user)
+      note.readers.include?user
     can :read, Note do |note|
       note.user_id == user.id
 
