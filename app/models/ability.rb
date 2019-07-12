@@ -9,6 +9,5 @@ class Ability
       note.readers.include?(user)
     end
     can :manage, Note, {user_id: user.id}
-    end
   end
 end
