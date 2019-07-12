@@ -12,7 +12,7 @@ class Ability
       note.user_id == user.id
     end
     can :update, Note do |note|
-       note.user_id == user.id
+      note.user_id == user.id
     end
   end
 end
