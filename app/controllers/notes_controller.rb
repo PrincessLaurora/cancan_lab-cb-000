@@ -21,7 +21,7 @@ class NotesController < ApplicationController
     end
 
     def update
-      if @note.update(note_params)
+      @note.update(note_params)
       redirect_to '/'
       end
     end
