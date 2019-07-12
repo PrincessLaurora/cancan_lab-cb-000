@@ -2,8 +2,10 @@
 
 class Ability
   include CanCan::Ability
-  return unless user
+
   def initialize(user)
+
+    return unless user
 
     can :read, Note do |note|
       note.readers.include?(user)
