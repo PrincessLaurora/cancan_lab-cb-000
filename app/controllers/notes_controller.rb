@@ -8,7 +8,7 @@ class NotesController < ApplicationController
     end
 
     def new
-      @note = Note.new
+      render partial: 'form', locals: {note: Note.new}
     end
 
     def create
