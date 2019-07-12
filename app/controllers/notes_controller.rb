@@ -14,18 +14,15 @@ class NotesController < ApplicationController
     end
 
     def create
-      if current_user
+      if note.user = current_user
       note = Note.new(note_params)
-      note.user = current_user
       note.save!
       end
       redirect_to '/'
     end
 
     def update
-      if current_user
       @note.update(note_params)
-      end
       redirect_to '/'
     end
 
