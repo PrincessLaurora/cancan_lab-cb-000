@@ -5,7 +5,7 @@ class Ability
 
   def initialize(user)
 
-    user ||= user.new
+    
 
     can :manage, Note, {user_id: user.id}
 
