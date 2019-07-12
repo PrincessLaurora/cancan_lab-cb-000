@@ -7,7 +7,7 @@ class Ability
 
     can :read, Note do |note|
       if user = note.readers
-    #   
+    #
 
     unless user.nil?
       can :update, Note
