@@ -7,8 +7,10 @@ class Ability
 
     can :read, Note do |note|
       if user = note.readers
-    #   user ||= User.new # guest user (not logged in)
-    can :update, Note, owner_id: user.id
+    #   
+
+    unless user.nil?
+      can :update, Note
     #     can :manage, :all
     #   else
     #     can :read, :all
