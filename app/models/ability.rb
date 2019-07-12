@@ -13,10 +13,10 @@ class Ability
     end
     can :update, Note do |note|
        note.user_id == user.id
-    end     
+    end
   end
 end
- #or 
+ #or
  #can :read, Note do |note|
    #note.readers.include?(user)
  #end
