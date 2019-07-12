@@ -18,6 +18,7 @@ class NotesController < ApplicationController
       note = Note.new(note_params)
       note.save!
       redirect_to '/'
+      end
     end
 
     def update
