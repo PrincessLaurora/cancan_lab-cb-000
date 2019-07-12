@@ -7,8 +7,9 @@ class Ability
 
     can :read, Note do |note|
       note.readers.include?(user)
-
-    #     can :manage, :all
+    can :read, Note do |note|
+      note.user_id = user.id
+      
     #   else
     #     can :read, :all
     #   end
