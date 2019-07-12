@@ -6,7 +6,7 @@ class Ability
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     can :read, Note do |note|
-
+      if user == note.readers
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?
     #     can :manage, :all
