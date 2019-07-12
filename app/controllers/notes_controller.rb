@@ -7,9 +7,10 @@ class NotesController < ApplicationController
      @notes = current_user.readable
       end
     end
-    
+
 
     def new
+      render partial: 'form', locals: {note: Note.new}
     end
 
     def create
