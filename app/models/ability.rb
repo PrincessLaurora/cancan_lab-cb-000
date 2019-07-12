@@ -11,7 +11,8 @@ class Ability
     can :read, Note do |note|
       note.user_id == user.id
     end
-    #   else
+    can :update, Note do |note|
+       note.user_id == user.id
     #     can :read, :all
     #   end
     #
@@ -29,6 +30,6 @@ class Ability
     # For example, here the user can only update published articles.
     #
     #   can :update, Article, :published => true
-  
+
   end
 end
