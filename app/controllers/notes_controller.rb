@@ -2,7 +2,6 @@ class NotesController < ApplicationController
   load_and_authorize_resource only: [:edit, :show, :update]
 
     def index
-      @notes = Notes.all
     end
 
     def new
